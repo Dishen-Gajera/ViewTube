@@ -15,7 +15,7 @@ const PORT = process.env.PORT;
 app.use(
   cors({
     origin:
-      "https://viewtube-frontend-bnn3xlwv4-dishen-gajeras-projects.vercel.app",
+      "https://viewtube-frontend-delta.vercel.app",
     credentials: true,
   })
 );
