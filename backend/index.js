@@ -8,6 +8,7 @@ import userRouter from "./routes/userRouter.js";
 import contentRouter from "./routes/contentRouter.js";
 
 dotenv.config();
+connectDb();
 
 const app = express();
 const PORT = process.env.PORT;
@@ -25,7 +26,4 @@ app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 app.use("/api/content", contentRouter);
 
-app.listen(PORT, () => {
-  console.log("server started");
-  connectDb();
-});
+export default app;
