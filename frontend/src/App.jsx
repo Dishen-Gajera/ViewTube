@@ -12,7 +12,7 @@ import MoblieProfile from "./components/MoblieProfile";
 import ForgetPassword from "./Pages/ForgetPassword";
 import CreateChannel from "./Pages/Channel/CreateChannel";
 import ViewChannel from "./Pages/Channel/ViewChannel";
-import useGetChannelData from "./customHooks/usegetChannelData";
+import useGetChannelData from "./customHooks/useGetChannelData";
 import UpdateChannel from "./Pages/Channel/UpdateChannel";
 import { useSelector } from "react-redux";
 import CreatePage from "./Pages/CreatePage";
