@@ -3,7 +3,8 @@ import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./Pages/Home";
 import SignUp from "./Pages/SignUp";
 import SignIn from "./Pages/SignIn";
-export const serverUrl = "http://localhost:8000";
+export const serverUrl =
+  "https://view-tube-git-main-dishen-gajeras-projects.vercel.app";
 import CustomAlert, { showAlertHandler } from "./components/CustomAlert";
 import Shorts from "./Pages/Shorts/Shorts";
 import useGetCurrentUser from "./customHooks/useGetCurrentUser";
