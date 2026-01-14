@@ -38,7 +38,7 @@ import Analytics from "./components/Analytics";
 import Content from "./components/Content";
 import Revenue from "./components/Revenue";
 import UpdateVideo from "./Pages/Videos/UpdateVideo";
-import Updateshort from "./Pages/Shorts/Updateshort";
+import Updateshort from "./Pages/Shorts/UpdateShort";
 import UpdatePlaylist from "./Pages/Playlist/UpdatePlaylist";
 
 const ProctedRoute = ({ data, children, message, isSignIn }) => {
