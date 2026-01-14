@@ -32,7 +32,7 @@ export const signUP = async (req, res) => {
     });
     const token = await genToken(user._id);
     res.cookie("token", token, {
-      httponly: true,
+      httpOnly: true,
       secure: true,
       samesite: "None",
       maxAge: 7 * 24 * 60 * 60 * 1000,
@@ -59,7 +59,7 @@ export const signIn = async (req, res) => {
 
     const token = await genToken(user._id);
     res.cookie("token", token, {
-      httponly: true,
+      httpOnly: true,
       secure: true,
       samesite: "None",
       maxAge: 7 * 24 * 60 * 60 * 1000,
@@ -101,7 +101,7 @@ export const googleAuth = async (req, res) => {
 
     const token = await genToken(user._id);
     res.cookie("token", token, {
-      httponly: true,
+      httpOnly: true,
       secure: true,
       samesite: "None",
       maxAge: 7 * 24 * 60 * 60 * 1000,
@@ -138,7 +138,7 @@ export const varifyOtp = async (req, res) => {
   try {
     const { email, otp } = req.body;
     const user = await User.findOne({ email });
-    if (!user || user.resetotp !== otp || user.otpexpires < Date.now) {
+    if (!user || user.resetotp !== otp || user.otpexpires < Date.now()) {
       return res.status(400).json({ message: "Invalid otp" });
     }
     user.isvarifiedotp = true;
