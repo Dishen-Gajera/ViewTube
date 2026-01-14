@@ -3,7 +3,7 @@ import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./Pages/Home";
 import SignUp from "./Pages/SignUp";
 import SignIn from "./Pages/SignIn";
-export const serverUrl = "https://view-tube-seven.vercel.app";
+export const serverUrl = "https://viewtube-backend-7umx.onrender.com";
 import CustomAlert, { showAlertHandler } from "./components/CustomAlert";
 import Shorts from "./Pages/Shorts/Shorts";
 import useGetCurrentUser from "./customHooks/useGetCurrentUser";

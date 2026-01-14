@@ -14,7 +14,7 @@ const app = express();
 const PORT = process.env.PORT;
 app.use(
   cors({
-    origin: "https://viewtube-frontend-delta.vercel.app",
+    origin: "https://viewtube-frontend-e6fw.onrender.com",
     credentials: true,
   })
 );
