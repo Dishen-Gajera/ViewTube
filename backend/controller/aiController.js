@@ -1,4 +1,3 @@
-import { GoogleGenAI } from "@google/genai";
 import Channel from "../model/channelModel.js";
 import dotenv from "dotenv";
 import Video from "../model/videoModel.js";
@@ -8,6 +7,7 @@ dotenv.config();
 
 export const searchWithAi = async (req, res) => {
   try {
+    const { GoogleGenAI } = await import("@google/genai");
     const { input } = req.body;
     if (!input) {
       return res.status(400).json({ message: "Search query is required" });
@@ -103,6 +103,7 @@ export const searchWithAi = async (req, res) => {
 
 export const filterCategoryWithAi = async (req, res) => {
   try {
+    const { GoogleGenAI } = await import("@google/genai");
     const { input } = req.body;
     if (!input) {
       return res.status(400).json({ message: "search query is required" });
