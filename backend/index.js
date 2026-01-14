@@ -14,13 +14,14 @@ const app = express();
 const PORT = process.env.PORT;
 app.use(
   cors({
-    origin:
-      "https://viewtube-frontend-delta.vercel.app",
+    origin: "https://viewtube-frontend-delta.vercel.app",
     credentials: true,
   })
 );
 
 app.use(cookieParser());
+app.use(express.urlencoded({ extended: true }));
+
 app.use(express.json());
 
 app.use("/api/auth", authRouter);
