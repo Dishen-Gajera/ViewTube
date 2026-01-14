@@ -4,7 +4,7 @@ import Home from "./Pages/Home";
 import SignUp from "./Pages/SignUp";
 import SignIn from "./Pages/SignIn";
 export const serverUrl =
-  "view-tube-bq7r44hc6-dishen-gajeras-projects.vercel.app";
+  "https://view-tube-bq7r44hc6-dishen-gajeras-projects.vercel.app";
 import CustomAlert, { showAlertHandler } from "./components/CustomAlert";
 import Shorts from "./Pages/Shorts/Shorts";
 import useGetCurrentUser from "./customHooks/useGetCurrentUser";
