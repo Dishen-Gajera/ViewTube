@@ -32,7 +32,7 @@ import Subscription from "./Pages/Subscription";
 import useGetHistory from "./customHooks/useGetHistory";
 import HistoryContent from "./Pages/HistoryContent";
 import useGetRecommendedContent from "./customHooks/useGetRecommendedContent";
-import VTStudio from "./Pages/Vtstudio";
+import VTStudio from "./Pages/VTStudio";
 import Dashboard from "./components/Dashboard";
 import Analytics from "./components/Analytics";
 import Content from "./components/Content";
