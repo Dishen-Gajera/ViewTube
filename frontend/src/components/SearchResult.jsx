@@ -68,7 +68,7 @@ function SearchResult({ SearchResults }) {
           {SearchResults?.videos?.length > 0 && (
             <div>
               <h3 className="text-xl font-bold mb-4">Videos</h3>
-              <div className="flex flex-wrap gap-6  md:justify-start justify-center">
+              <div className="flex flex-wrap  md:justify-start gap-6 mb-12 items-center justify-center">
                 {SearchResults?.videos?.map((video) => {
                   return (
                     <div key={video._id}>

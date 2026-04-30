@@ -31,7 +31,7 @@ function AllVideosPage() {
     }
   }, [allVideosData]);
   return (
-    <div className=" flex flex-wrap  md:justify-start gap-6 mb-12 items-center justify-center">
+    <div className="flex flex-wrap  md:justify-start gap-6 mb-12 items-center justify-center">
       {allVideosData?.map((video) => {
         return (
           <VideoCard
