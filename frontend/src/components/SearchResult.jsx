@@ -71,18 +71,18 @@ function SearchResult({ SearchResults }) {
               <div className="flex flex-wrap  md:justify-start gap-6 mb-12 items-center justify-center">
                 {SearchResults?.videos?.map((video) => {
                   return (
-                    <div key={video._id}>
-                      <VideoCard
-                        channelName={video.channel.name}
-                        channellogo={video.channel.avatar}
-                        id={video._id}
-                        thumbnail={video.thumbnail}
-                        title={video.title}
-                        views={video.views}
-                        key={video._id}
-                        duration={duration[video._id] || "0:00"}
-                      />
-                    </div>
+
+                    <VideoCard
+                      channelName={video.channel.name}
+                      channellogo={video.channel.avatar}
+                      id={video._id}
+                      thumbnail={video.thumbnail}
+                      title={video.title}
+                      views={video.views}
+                      key={video._id}
+                      duration={duration[video._id] || "0:00"}
+                    />
+
                   );
                 })}
               </div>
