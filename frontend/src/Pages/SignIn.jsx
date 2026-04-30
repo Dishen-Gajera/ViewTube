@@ -132,14 +132,17 @@ function SignIn() {
                 Next
               </button>
             </div>
-            <button
-              className="flex items-center gap-3 px-4 py-2 rounded-full bg-orange-500 hover:bg-orange-600 text-white mt-3"
-              onClick={handelGoogleAuth}
-            >
-              {" "}
-              <FcGoogle className="text-xl" />
-              SignIn with google account
-            </button>
+            <div className="flex items-center justify-center w-full mt-3">
+              <button
+                className="flex items-center gap-3 px-4 py-2 rounded-full bg-orange-500 hover:bg-orange-600 text-white"
+                onClick={handelGoogleAuth}
+              >
+                {" "}
+                <FcGoogle className="text-xl" />
+                SignIn with google account
+              </button>
+
+            </div>
           </>
         )}
         {step == 2 && (
