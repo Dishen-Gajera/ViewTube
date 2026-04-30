@@ -9,6 +9,10 @@ import { ClipLoader } from "react-spinners";
 import { showAlertHandler } from "../components/CustomAlert";
 import { setUserData } from "../Redux/userSlice";
 import { useDispatch } from "react-redux";
+import { FcGoogle } from "react-icons/fc";
+import { auth, provider } from "../../utils/firebase";
+
+
 
 function SignUp() {
   const [step, setStep] = useState(1);
@@ -83,6 +87,29 @@ function SignUp() {
     }
   };
 
+  const handelGoogleAuth = async () => {
+    try {
+      const response = await signInWithPopup(auth, provider);
+      console.log(response);
+      const user = response.user;
+      const formData = new FormData();
+      formData.append("username", user.displayName);
+      formData.append("email", user.email);
+      formData.append("photourl", user.photoURL);
+
+      const result = await axios.post(
+        `${serverUrl}/api/auth/googleauth`,
+        formData,
+        { withCredentials: true }
+      );
+      showAlertHandler("signin with google sucessfully");
+      dispatch(setUserData(result.data));
+    } catch (error) {
+      console.log(error.response.data.message);
+      console.log(error);
+    }
+  };
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-[#181818]">
       <div className="bg-[#202124] rounded-2xl p-10 w-full max-w-md shadow-lg">
@@ -130,6 +157,14 @@ function SignUp() {
                 Next
               </button>
             </div>
+            <button
+              className="flex items-center gap-3 px-4 py-2 hover:bg-gray-700"
+              onClick={handelGoogleAuth}
+            >
+              {" "}
+              <FcGoogle className="text-xl" />
+              SignIn with google account
+            </button>
           </>
         )}
         {step == 2 && (
