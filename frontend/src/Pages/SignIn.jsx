@@ -74,6 +74,7 @@ function SignIn() {
       );
       showAlertHandler("signin with google sucessfully");
       dispatch(setUserData(result.data));
+      navigate("/")
     } catch (error) {
       console.log(error?.response?.data?.message);
 
@@ -132,7 +133,7 @@ function SignIn() {
               </button>
             </div>
             <button
-              className="flex items-center gap-3 px-4 py-2 hover:bg-gray-700 text-white mt-2"
+              className="flex items-center gap-3 px-4 py-2 rounded-full bg-orange-500 hover:bg-orange-600 text-white mt-2"
               onClick={handelGoogleAuth}
             >
               {" "}
