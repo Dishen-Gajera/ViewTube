@@ -11,6 +11,7 @@ import { setUserData } from "../Redux/userSlice";
 import { useDispatch } from "react-redux";
 import { FcGoogle } from "react-icons/fc";
 import { auth, provider } from "../../utils/firebase";
+import { signInWithPopup } from "firebase/auth";
 
 
 
