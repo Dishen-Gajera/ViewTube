@@ -152,7 +152,13 @@ function SignUp() {
               onChange={(e) => setEmail(e.target.value)}
               value={email}
             />
-            <div className="flex justify-end">
+            <div className="flex justify-between items-center">
+              <button
+                className="text-orange-400 text-sm hover:underline"
+                onClick={() => navigate("/signin")}
+              >
+                Already have Account ? Login
+              </button>
               <button
                 className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full"
                 onClick={handleNext}
