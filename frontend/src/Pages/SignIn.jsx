@@ -74,7 +74,8 @@ function SignIn() {
       showAlertHandler("signin with google sucessfully");
       dispatch(setUserData(result.data));
     } catch (error) {
-      console.log(error.response.data.message);
+      console.log(error?.response?.data?.message);
+
 
       console.log(error);
     }
