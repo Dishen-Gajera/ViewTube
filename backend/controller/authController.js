@@ -130,6 +130,7 @@ export const sendOtp = async (req, res) => {
       .status(200)
       .json({ message: "otp sent to your mail successfully" });
   } catch (error) {
+    console.log(error);
     return res.status(500).json({ message: "send Otp error" + error });
   }
 };
