@@ -10,24 +10,13 @@ const transporter = nodemailer.createTransport({
     user: process.env.USER,
     pass: process.env.PASS,
   },
-  connectionTimeout: 10000, 
-  greetingTimeout: 10000,
-  socketTimeout: 10000,
 });
 
 // Wrap in an async IIFE so we can use await.
 
-transporter.verify((err, success) => {
-  if (err) {
-    console.log("VERIFY ERROR:", err);
-  } else {
-    console.log("SMTP READY");
-  }
-});
-
 const sendMail = async (to, otp) => {
   
-      await transporter.sendMail({
+    await transporter.sendMail({
     from: process.env.USER,
     to: to,
     subject: "OTP for forgot password",
@@ -38,8 +27,6 @@ const sendMail = async (to, otp) => {
       "</b> <p>this is valid only 5 minutes<p/>", // HTML body
   });
  
-  
-
 };
 
 export default sendMail;
