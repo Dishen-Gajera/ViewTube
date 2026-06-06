@@ -14,6 +14,14 @@ const transporter = nodemailer.createTransport({
 
 // Wrap in an async IIFE so we can use await.
 
+transporter.verify((err, success) => {
+  if (err) {
+    console.log("VERIFY ERROR:", err);
+  } else {
+    console.log("SMTP READY");
+  }
+});
+
 const sendMail = async (to, otp) => {
   
       await transporter.sendMail({
